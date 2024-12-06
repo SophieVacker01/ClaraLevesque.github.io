@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Ahom&display=swap');
+
+* {
+  font-family: "Josefin Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    margin-top: 175px;
+    min-height: 100vh;
+    background: #2f3542;
+    color: #dfe4ea;
+    transition: background-color 0.5s ease-in-out; /* Transition fluide pour le changement de fond */
+}
+
+body h1 {
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+body h1 span, body h1 i {
+    color: #ffa502;
+}
+
+.container, #cours{
+    text-align: center;
+}
+
+body h3 {
+    color: #ffa502;
+    font-size: 1.5rem;
+}
+
+body .container .choices {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3rem auto 3rem;
+    width: 500px;
+}
+
+body .container .choices button {
+    flex: 1 0 45%;
+    width: 200px;
+    height: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin: 0.4rem;
+    outline: none;
+    background: #dfe4ea;
+    user-select: none;
+    font-weight: 600;
+}
+
+body .container .choices button:hover {
+    background: #ffa502;
+    transition: 0.5s;
+}
+
+body .container .choices button:active {
+    transform: scale(0.9);
+    transition: transform 0.1s;
+}
+
+body .container .choices button p {
+    font-size: 1.3rem;
+}
+
+body #progress {
+    font-size: 1.3rem;
+    color: #ffa502;
+}
+
+dialog {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    border-radius: 15px;
+    box-shadow: 0 0 25px black, 0 0 10px darkblue
+}
+
+dialog h2 {
+    font-size: 2.5em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.italique {
+    font-style: italic;
+}
+
+form .identification {
+    float: left;
+    grid-area: identification;
+}
+
+.dialogue img {
+    position: absolute;
+    top: 160px;
+    float: right;
+    width: 170px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 170px;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "identification image";
+}
+
+hr {
+    width: 350px;
+    margin: auto;
+    border-color: rgba(93, 188, 251, 0.5);
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 125px 200px 125px;
+    grid-template-rows: 65px;
+    grid-template-areas: 
+    ". boutton ."
+}
+
+.dialogue button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    background-color: #0050FF;
+    border-color: #0050FF;
+    color: white;
+}
+
+.boutton {
+    grid-area: boutton;
+}
+
+.message {
+    position: absolute;
+    top: 380px;
+    left: 175px;
+    font-style: italic;
+}
+
+.boutton h4 {
+    font-size: 20px;
+}
+
+.dialogue2 {
+    display: none; /* Cachée par défaut */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+} 
+
+.dialogue-visible { 
+    display: block;
+}
+
+#message_reponse {
+    color:orange;
+}
+
+body.dialog-open {
+    background: rgba(93, 188, 251, 0.5);
+}
