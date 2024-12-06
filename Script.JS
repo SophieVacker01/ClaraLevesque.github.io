@@ -163,6 +163,7 @@ let quiz = new Quiz(questions);
 quizApp();
 
 //Code pour l'arrière-plan
+//Ajouter évènement 
 document.addEventListener('DOMContentLoaded', () => {
     const dialogPrincipal = document.getElementById('dialog-principal');
 
@@ -184,17 +185,17 @@ document.addEventListener('DOMContentLoaded', () => {
     dialogPrincipal.addEventListener('close', fermerDialog);
 });
 
+// Fonction pour fermer la boîte de dialogue2
 document.addEventListener('DOMContentLoaded', () => {
-    // Fonction pour fermer la boîte de dialogue
     boutonFermer.addEventListener('click', () => {
         quiz.cacherDialogue(dialogue2); 
     }); 
 });
 
-//Faire en sorte que le message ne se raffiche plus quand on clique sur ne plus afficher
+//Faire en sorte que le dialogue principal ne se raffiche plus quand on clique sur ne plus afficher
 document.addEventListener('DOMContentLoaded', () => {
     // Vérifier si le message ne doit plus être affiché
-    if (localStorage.getItem('hideMessage') === messageCacher) {
+    if (localStorage.getItem('messageCacher') === messageCacher) {
         dialogPrincipal.close();
     } else {
         dialogPrincipal.show();
@@ -205,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fonction pour ne plus afficher le message
     messageElement.addEventListener('click', () => {
-        localStorage.setItem('hideMessage', messageCacher);
+        localStorage.setItem('messageCacher', messageCacher);
         dialogPrincipal.close();
     });
 });
